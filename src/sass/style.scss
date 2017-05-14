@@ -1,0 +1,135 @@
+@import '_variables';
+@import '_reset';
+@import '_animations';
+@import '_button';
+
+/* app */
+.twitter-share-button {
+    display: none;
+}
+
+.github-source-link {
+    display: none;
+
+    .github-source-icon {
+        max-height: 28px;
+    }
+}
+    
+
+body {
+    font-family: $font-mono;
+    font-size: 10px;
+    line-height: 10px;
+    background-size: 400% 400%;
+    background: linear-gradient(0deg, $royal-light-blue, $royal-dark-blue);
+    -webkit-animation: BackgroundAnim 4s ease infinite;
+    -moz-animation: BackgroundAnim 4s ease infinite;
+    animation: BackgroundAnim 4s ease infinite;
+}
+
+section {
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+    padding-top: $space-base * 3;
+}
+
+input[type="text"] {
+    display: block;
+    margin: 0 auto;
+    width: 60px;
+    font-size: 16px;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    text-align: center;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+input[type="text"] {
+    padding: $space-base;
+    border: solid 1px #dcdcdc;
+    transition: box-shadow 0.3s, border 0.3s;
+}
+
+input[type="text"]:focus {
+    border: solid 1px #707070;
+    box-shadow: 0 0 5px 1px #969696;
+}
+
+#error-message {
+    font-size: 1rem;
+    color: #eeeeee;
+}
+
+p {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $heading-color;
+    line-height: 2em;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 2em;
+}
+
+h2 {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+}
+
+h3 {
+    font-size: 1rem;
+    line-height: 1rem;
+    padding: $space-base;
+    font-style: italic;
+}
+
+h4 {
+    font-size: 2rem;
+    line-height: 2rem;    
+    font-variant: small-caps;
+}
+
+table {
+
+    width: 100%;
+    margin: $space-base * 3 auto;
+    font-family: monospace;
+    color: #eeeeee;
+
+		tr {
+		    border-bottom: 1px solid #cccccc;    
+		}    
+
+		th {
+		    font-size: 32px;
+		    padding: $space-base * 2;
+		    text-transform: lowercase;
+		    font-variant: small-caps;
+		}		
+
+		td {
+		    padding: 10px;
+		    font-size: 20px;
+
+		    &:first-of-type {
+    			width: 50%;
+    			text-align: right;
+            }
+
+			&:last-of-type {
+    			width: 50%;
+    			text-align: left;
+            }
+		}
+}

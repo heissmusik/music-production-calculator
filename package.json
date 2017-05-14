@@ -1,0 +1,23 @@
+{
+  "name": "just-the-server",
+  "version": "1.0.0",
+  "description": "##Setup Instructions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "abbrev": "^1.0.7",
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-express": "^1.4.1",
+    "grunt-open": "^0.2.3",
+    "grunt-parallel": "^0.4.1",
+    "grunt-contrib-compass": "~1.1.1"    
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,8 @@
+.idea/
+.DS_Store
+src/assets/vendor
+node_modules/
+npm-debug.log
+served
+.sass-cache/
+rsync.sh

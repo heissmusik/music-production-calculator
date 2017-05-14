@@ -1,0 +1,134 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="A music production calculator for delay and reverb times, measured in milliseconds and based upon your BPM.">
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=123456">
+
+    <!-- BEGING Facebook Open Graph protocol -->
+    <meta property="og:image" content="http://heissmusik.com/custom/img/heiss-fb-open-graph-meta-social-sharing-photo.jpg"/>  
+    <meta property="og:url" content="http://heissmusik.com/music-production-calculator"/>
+    <meta property="og:title" content="Music production calculator"/>
+    <meta property="og:description" content="Music Production Calculator - BPM to millisecond conversion for beat synchronized delay and reverb times."/>
+    <meta property="og:site_name" content="HEISS"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_us"/>
+    <!-- END Facebook Open Graph protocol -->
+    
+    <!-- BEGIN Twitter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="http://heissmusik.com/music-production-calculator">
+    <meta name="twitter:creator" content="heissmusik">
+    <meta property="twitter:image" content="http://heissmusik.com/custom/img/heiss-fb-open-graph-meta-social-sharing-photo.jpg"/> 
+    <meta property="twitter:title" content="Music Production Calculator  - BPM to millisecond conversion for beat synchronized delay and reverb times."/> 
+    <!-- END Twitter card -->
+
+    <title>Music Production Calculator  - BPM to millisecond conversion for beat synchronized delay and reverb times.</title>
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>   
+    <script type="text/javascript" src="delay-calc.js"></script>
+
+    <script>window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+        t._e.push(f);
+      };
+
+      return t;
+    }(document, "script", "twitter-wjs"));</script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-5783558133745621",
+        enable_page_level_ads: true
+      });
+    </script>
+</head>
+
+<body>
+
+	<section>
+        <h1>Music Production Calculator</h1>
+        <h2>BPM to millisecond conversion</h2>
+        <p>(60000 divided by BPM equals a 1/4 note...)</p>
+        <hr>
+        <h4>enter a bpm below</h4>
+        <br>
+        <input type="text" id="bpm" placeholder="BPM">
+		<a id="getResults" class="button"><span>Got the time?</span></a>
+        <div id="error-message">&nbsp;</div>
+
+        <a class="twitter-share-button"
+          href="https://twitter.com/share"
+          data-size="large"
+          data-text="I just calculated delay and reverb time in milliseconds based upon my BPM "
+          data-url="http://heissmusik.com/music-production-calculator"
+          data-hashtags="music,production"
+          data-via="heissmusik"
+          data-related="twitterapi,twitter">
+        Tweet
+        </a>
+
+        <a class="github-source-link" href="https://github.com/heissmusik/music-production-calculator" target="_blank">
+            <img src="Octocat.png" class="github-source-icon"/>
+        </a>
+        
+	</section>
+
+    <div id="results"></div>
+
+    <script id="delayTimeTpl" type="text/template">
+        <table>
+            <tr><th colspan="2">Notes</th></tr>
+            <tr><td>1/1</td><td><%= (60000 / bpm * 4).toFixed(3) %> ms</td></tr>
+            <tr><td>1/2</td><td><%= (60000 / bpm * 2).toFixed(3) %> ms</td></tr>
+            <tr><td>1/4</td><td><%= (60000 / bpm).toFixed(3) %> ms</td></tr>
+            <tr><td>1/8</td><td><%= ((60000 / bpm) / 2 ).toFixed(3) %> ms</td></tr>
+            <tr><td>1/16</td><td><%= ((60000 / bpm) / 4 ).toFixed(3) %> ms</td></tr>
+            <tr><td>1/32</td><td><%= ((60000 / bpm) / 8 ).toFixed(3) %> ms</td></tr>
+            <tr><td>1/64</td><td><%= ((60000 / bpm) / 16 ).toFixed(3) %> ms</td></tr>
+            <tr><td>1/128</td><td><%= ((60000 / bpm) / 32 ).toFixed(3) %> ms</td></tr>
+        </table>
+        <table>
+            <tr><th colspan="2">Triplets</th></tr>
+            <tr><td>1/1</td><td><%= ((60000 / bpm * .666666) * 4).toFixed(3) %> ms</td></tr>
+            <tr><td>1/2</td><td><%= ((60000 / bpm * .666666) * 2).toFixed(3) %> ms</td></tr>
+            <tr><td>1/4</td><td><%= (60000 / bpm * .666666).toFixed(3) %> ms</td></tr>
+            <tr><td>1/8</td><td><%= ((60000 / bpm * .666666) / 2).toFixed(3) %> ms</td></tr>
+            <tr><td>1/16</td><td><%= ((60000 / bpm * .666666) / 4).toFixed(3) %> ms</td></tr>
+            <tr><td>1/32</td><td><%= ((60000 / bpm * .666666) / 8).toFixed(3) %> ms</td></tr>
+            <tr><td>1/64</td><td><%= ((60000 / bpm * .666666) / 16).toFixed(3) %> ms</td></tr>
+            <tr><td>1/128</td><td><%= ((60000 / bpm * .666666) / 32).toFixed(3) %> ms</td></tr>
+        </table>
+        <table>
+            <tr><th colspan="2">Dotted</th></tr>
+            <tr><td>1/1</td><td><%= ((60000 / bpm * 1.5) * 4).toFixed(3) %> ms</td></tr>
+            <tr><td>1/2</td><td><%= ((60000 / bpm * 1.5) * 2).toFixed(3) %> ms</td></tr>
+            <tr><td>1/4</td><td><%= (60000 / bpm * 1.5).toFixed(3) %> ms</td></tr>
+            <tr><td>1/8</td><td><%= ((60000 / bpm * 1.5) / 2).toFixed(3) %> ms</td></tr>
+            <tr><td>1/16</td><td><%= ((60000 / bpm * 1.5) / 4).toFixed(3) %> ms</td></tr>
+            <tr><td>1/32</td><td><%= ((60000 / bpm * 1.5) / 8).toFixed(3) %> ms</td></tr>
+            <tr><td>1/64</td><td><%= ((60000 / bpm * 1.5) / 16).toFixed(3) %> ms</td></tr>
+            <tr><td>1/128</td><td><%= ((60000 / bpm * 1.5) / 32).toFixed(3) %> ms</td></tr>
+        </table>
+    </script>
+
+</body>
+</html>

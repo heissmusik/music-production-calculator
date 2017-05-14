@@ -1,0 +1,288 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 6, sass/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 27, sass/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 31, sass/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 34, sass/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 37, sass/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 40, sass/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 45, sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@-webkit-keyframes BackgroundAnim {
+  0% {
+    background-position: 51% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 51% 0%;
+  }
+}
+@-moz-keyframes BackgroundAnim {
+  0% {
+    background-position: 51% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 51% 0%;
+  }
+}
+@keyframes BackgroundAnim {
+  0% {
+    background-position: 51% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 51% 0%;
+  }
+}
+/* line 1, sass/_button.scss */
+.button {
+  display: inline-block;
+  margin: 30px auto;
+  -webkit-border-radius: 10px;
+  -webkit-box-shadow: 0px 3px gray, 0px 4px #767676, 0px 5px #6c6c6c, 0px 6px #626262, 0px 7px #585858, 0px 8px #4e4e4e;
+  -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+}
+
+/* line 15, sass/_button.scss */
+.button span {
+  display: inline-block;
+  padding: 10px 40px 10px 40px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #27408b;
+  text-transform: uppercase;
+  background-color: #ffff00;
+  -webkit-background-size: 100%, 100%, 100%, 4px 4px;
+  -webkit-border-radius: 10px;
+  -webkit-transition: -webkit-transform .1s ease-in-out;
+}
+
+/* line 28, sass/_button.scss */
+.button span:hover {
+  color: #fffffc;
+  background-color: #ff9505;
+  text-shadow: 0px -1px #97A63A;
+  cursor: pointer;
+}
+
+/* line 35, sass/_button.scss */
+.button span:after {
+  color: #AEBF3B;
+  text-shadow: 0px 1px #fff, 0px -1px #97A63A;
+  font-size: 26px;
+}
+
+/* line 41, sass/_button.scss */
+.button:active {
+  -webkit-box-shadow: 0px 3px gray, 0px 4px #767676, 0px 5px #6c6c6c, 0px 6px #626262, 0px 7px #585858, 0px 8px #4e4e4e, 0px 10px 2px 0px rgba(128, 128, 128, 0.6);
+  /* shadow */
+}
+
+/* line 52, sass/_button.scss */
+.button:active span {
+  -webkit-transform: translate(0, 5px);
+  /* depth of button press */
+}
+
+/* app */
+/* line 7, sass/style.scss */
+.twitter-share-button {
+  display: none;
+}
+
+/* line 11, sass/style.scss */
+.github-source-link {
+  display: none;
+}
+/* line 14, sass/style.scss */
+.github-source-link .github-source-icon {
+  max-height: 28px;
+}
+
+/* line 20, sass/style.scss */
+body {
+  font-family: "PT Mono", monospace;
+  font-size: 10px;
+  line-height: 10px;
+  background-size: 400% 400%;
+  background: linear-gradient(0deg, #016fb9, #27408b);
+  -webkit-animation: BackgroundAnim 4s ease infinite;
+  -moz-animation: BackgroundAnim 4s ease infinite;
+  animation: BackgroundAnim 4s ease infinite;
+}
+
+/* line 31, sass/style.scss */
+section {
+  text-align: center;
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+/* line 38, sass/style.scss */
+input[type="text"] {
+  display: block;
+  margin: 0 auto;
+  width: 60px;
+  font-size: 16px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  text-align: center;
+}
+
+/* line 49, sass/style.scss */
+input[type="text"]:focus {
+  outline: none;
+}
+
+/* line 53, sass/style.scss */
+input[type="text"] {
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+
+/* line 59, sass/style.scss */
+input[type="text"]:focus {
+  border: solid 1px #707070;
+  box-shadow: 0 0 5px 1px #969696;
+}
+
+/* line 64, sass/style.scss */
+#error-message {
+  font-size: 1rem;
+  color: #eeeeee;
+}
+
+/* line 69, sass/style.scss */
+p {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 2em;
+}
+
+/* line 75, sass/style.scss */
+h1, h2, h3, h4, h5, h6 {
+  color: #ffff00;
+  line-height: 2em;
+}
+
+/* line 80, sass/style.scss */
+h1 {
+  font-size: 2rem;
+  line-height: 2em;
+}
+
+/* line 85, sass/style.scss */
+h2 {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+}
+
+/* line 90, sass/style.scss */
+h3 {
+  font-size: 1rem;
+  line-height: 1rem;
+  padding: 10px;
+  font-style: italic;
+}
+
+/* line 97, sass/style.scss */
+h4 {
+  font-size: 2rem;
+  line-height: 2rem;
+  font-variant: small-caps;
+}
+
+/* line 103, sass/style.scss */
+table {
+  width: 100%;
+  margin: 30px auto;
+  font-family: monospace;
+  color: #eeeeee;
+}
+/* line 110, sass/style.scss */
+table tr {
+  border-bottom: 1px solid #cccccc;
+}
+/* line 114, sass/style.scss */
+table th {
+  font-size: 32px;
+  padding: 20px;
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+/* line 121, sass/style.scss */
+table td {
+  padding: 10px;
+  font-size: 20px;
+}
+/* line 125, sass/style.scss */
+table td:first-of-type {
+  width: 50%;
+  text-align: right;
+}
+/* line 130, sass/style.scss */
+table td:last-of-type {
+  width: 50%;
+  text-align: left;
+}
