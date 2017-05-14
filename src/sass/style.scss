@@ -69,21 +69,28 @@ input[type="text"]:focus {
 p {
     color: #ffffff;
     font-size: 14px;
-    line-height: 1.5em;
+    line-height: 2em;
+
+    &.details {
+        font-size: 10px;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
     color: $heading-color;
-    line-height: 1.5em;
+    line-height: 2em;
 }
 
 h1 {
     font-size: 2rem;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 h2 {
     font-size: 1.4rem;
     line-height: 1.4rem;
+    margin-bottom: 1.2rem;
 }
 
 h3 {
