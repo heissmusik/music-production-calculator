@@ -8,7 +8,7 @@ You can see and use it [here](http://heissmusik.com/music-production-calculator/
 
 Install Instructions
 - Clone the repo
-- ```cd music-production/calulator```
+- ```cd music-production-calulator```
 - ```npm install```
 - ```grunt```
 
