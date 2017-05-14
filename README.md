@@ -6,8 +6,9 @@ I was tired of using an actual calculator with the formula 60000 divided by BPM 
 
 You can see and use it [here](http://heissmusik.com/music-production-calculator/)
 
+Install Instructions
+- Clone the repo
+- ```cd music-production/calulator```
+- ```npm install```
+- ```grunt```
 
-```
-npm install
-grunt
-```
